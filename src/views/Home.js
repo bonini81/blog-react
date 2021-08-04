@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { News } from '../components/News';
 
 const Home = () => {
 
@@ -18,7 +18,7 @@ const Home = () => {
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="file">inner-peace</span>
-            
+            <News />
             </a>
           </li>
           <li class="nav-item">

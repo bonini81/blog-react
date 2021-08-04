@@ -1,0 +1,72 @@
+import React, {  useEffect, useState } from 'react';
+import Book from '../components/News/News.js';
+import { FaDatabase } from 'react-icons/fa';
+
+
+const NewsList = () => {
+
+const { axiosInstance, isAuth } =  useContext(AuthContext);
+
+
+const [ books, setBooks ] = useState( [] );
+const [ text, setText ] = useState('Loading News...'); 
+
+const getBooks = () =>  axiosInstance.get('/api/v1/libros');
+
+
+useEffect( () => {
+
+  //  if (!isAuth) return ( <Redirect to="/" /> )
+
+    getBooks()
+    .then(( response ) => {
+
+        const books = response.data;
+        setBooks(books);
+        setText(`Al momento hay ${books.length} libros disponbiles`);
+
+    })
+    .catch (() =>
+ 
+        setText(`No hay libros disponibles`)
+        
+        );
+
+        //usefect fuciona al cargarse el componente y hay que poner los [] al final sino se vuelve una actualizacion infinita
+        // del componente. 
+
+}, [] )
+
+
+
+    return (
+    <React.Fragment>
+
+   
+    <div className="container">
+        <br/>
+    <h1 className="tituloLibros"><FaDatabase /> { favorite } Mis Libros</h1>
+    <p>{ text }  </p>
+          <div className="row">
+    { books.map((book) => {
+         
+        return <News 
+        key={book._id}
+        book_author ={book.book_author}
+        book_title ={ book.book_title }
+        book_img = {book.book_img}
+        book_description = {book.book_description}
+        book_year = { book.book_year }
+        book_url = { book.book_url }
+        book_category = {book.book_category}
+
+        />
+     
+    })}
+       </div>
+        </div>
+    </React.Fragment>
+    );
+}
+
+export default NewsList;
