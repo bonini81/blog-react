@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize');
+
+body {
+    font-family: 'Electrolize', sans-serif;
+}
+
+
+/*** 
+1. Menu Links 
+***/
+
+
+.skullIcono {
+
+    color: #000;
+   
+}
+
+nav.navbar.bg-dark {
+
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+  
+    
+
+}
+
+nav.navbar.bg-dark a {
+
+  color: #000 !important;
+    
+
+}
+
+.nav-item:hover {
+    background-color: #7350ff;
+    border-radius: 5px;
+}
+
+
+.piepag-adb {
+
+    background-color: #7350ff;
+    margin-top: 5%;
+
+}
+
+
+p.piepag-parrafo {
+
+display: table-cell;
+vertical-align: middle;
+color: #fff;
+height: 50px;
+text-align: center;
+
+}
+
+
+footer {
+  background-color: #333 !important;
+}

@@ -11,7 +11,7 @@ export default [
 <React.Fragment>
 
 
-<Route exact path="/home" component={ Home } ></Route>
+<Route exact path="/" component={ Home } ></Route>
 
 
   </React.Fragment>

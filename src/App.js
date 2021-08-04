@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Navigation from './components/Navigation';
+import Footer from './components/Footer/';
 import Routes from './Routes';
 
 function App() {
@@ -12,11 +13,15 @@ function App() {
       
       <Router>
       <Navigation />
-      <Switch> 
+        <Switch>
+ 
     
     { Routes }
  
-  </Switch>
+        </Switch>
+      
+        <Footer />
+
 
       </Router>
     

@@ -21,21 +21,19 @@ const Navigation = (props) => {
      className="navbar navbar-dark bg-dark"
      // style={{ backgroundColor: "black", color: "red" }}
      expand="md">
-     <NavbarBrand tag={Link} to="/">MyPocket Links</NavbarBrand>
+     <NavbarBrand tag={Link} to="/">Blog News RSS</NavbarBrand>
      <NavbarToggler onClick={toggle} />
      <Collapse isOpen={isOpen} navbar>
        <Nav className="mr-auto" navbar>
+     
          <NavItem>
-           <NavLink tag={Link} to="/">Login</NavLink>
+           <NavLink tag={Link} to="/">Home</NavLink>
          </NavItem>
          <NavItem>
-           <NavLink tag={Link} to="/home">Home</NavLink>
+           <NavLink tag={Link} to="/signup">Local Posts</NavLink>
          </NavItem>
          <NavItem>
-           <NavLink tag={Link} to="/signup">Signup</NavLink>
-         </NavItem>
-         <NavItem>
-           <NavLink tag={Link} to="/linkupload">Add my Link</NavLink>
+           <NavLink tag={Link} to="/linkupload">Remote Posts</NavLink>
          </NavItem>
        
        </Nav>
