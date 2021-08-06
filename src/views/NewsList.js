@@ -1,72 +1,72 @@
-import React, {  useEffect, useState } from 'react';
-import Book from '../components/News/News.js';
-import { FaDatabase } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
+  import News from '../components/News';
+
+
 
 
 const NewsList = () => {
 
-const { axiosInstance, isAuth } =  useContext(AuthContext);
+  const [data, setData] = useState([]);
+  const [ error, setError ] = useState([]);
+  //https://www.freecodecamp.org/news/fetch-data-react/
+  //https://www.freecodecamp.org/news/content/images/2021/03/clip-2-axios-min.gif
+  // Good example, https://stackoverflow.com/questions/57263525/useeffect-not-being-called-and-not-updating-state-when-api-is-fetched
+    
+  const getNews = () => axios.get('https://gnews.io/api/v4/search?q=watches&token=b4260ebfe932d9c37aa81837c7ae32e6');
 
+  useEffect(() => {
 
-const [ books, setBooks ] = useState( [] );
-const [ text, setText ] = useState('Loading News...'); 
-
-const getBooks = () =>  axiosInstance.get('/api/v1/libros');
-
-
-useEffect( () => {
-
-  //  if (!isAuth) return ( <Redirect to="/" /> )
-
-    getBooks()
-    .then(( response ) => {
-
-        const books = response.data;
-        setBooks(books);
-        setText(`Al momento hay ${books.length} libros disponbiles`);
-
+    getNews()
+    .then((response) => {
+    const newsfetch = response.data.articles;
+      setData(newsfetch);
+      console.log(data);
     })
-    .catch (() =>
- 
-        setText(`No hay libros disponibles`)
-        
-        );
+      .catch(() => setError(`No News available.`));
+    
 
-        //usefect fuciona al cargarse el componente y hay que poner los [] al final sino se vuelve una actualizacion infinita
-        // del componente. 
-
-}, [] )
-
-
-
-    return (
-    <React.Fragment>
+    }, [])
 
    
-    <div className="container">
-        <br/>
-    <h1 className="tituloLibros"><FaDatabase /> { favorite } Mis Libros</h1>
-    <p>{ text }  </p>
-          <div className="row">
-    { books.map((book) => {
-         
-        return <News 
-        key={book._id}
-        book_author ={book.book_author}
-        book_title ={ book.book_title }
-        book_img = {book.book_img}
-        book_description = {book.book_description}
-        book_year = { book.book_year }
-        book_url = { book.book_url }
-        book_category = {book.book_category}
+  
 
-        />
+    return (
+    
+<React.Fragment>
+
+
+<div className="container width-adb">
+	<div className="row">
+		<div className="col-12">
+
+    <h1 className="titulos-cards">Available Links My Man</h1>
+    <h2 className="titulos-cards"> Hi</h2>
+
+     { data && data.map((datanews) => {
+       return <News
      
-    })}
-       </div>
-        </div>
-    </React.Fragment>
-    );
-}
+	title= { datanews.title }
+	
+	/>
 
+})}
+                        
+</div>
+</div>
+</div>
+
+
+  
+
+</React.Fragment>
+
+     );
+
+}
+ 
 export default NewsList;

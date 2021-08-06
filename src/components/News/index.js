@@ -1,1 +1,5 @@
-export { default as News } from './News';
+import News from './News';
+
+
+
+export default News; 

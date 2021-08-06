@@ -30,10 +30,10 @@ const Navigation = (props) => {
            <NavLink tag={Link} to="/">Home</NavLink>
          </NavItem>
          <NavItem>
-           <NavLink tag={Link} to="/signup">Local Posts</NavLink>
+           <NavLink tag={Link} to="/neww">Local Posts</NavLink>
          </NavItem>
          <NavItem>
-           <NavLink tag={Link} to="/linkupload">Remote Posts</NavLink>
+           <NavLink tag={Link} to="/newslist">Remote Posts</NavLink>
          </NavItem>
        
        </Nav>
