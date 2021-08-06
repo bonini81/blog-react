@@ -41,22 +41,25 @@ const NewsList = () => {
 
 
 <div className="container width-adb">
-	<div className="row">
-		<div className="col-12">
 
-    <h1 className="titulos-cards">Available Links My Man</h1>
-    <h2 className="titulos-cards"> Hi</h2>
 
+
+    <h1 className="titulos-cards">Remote Links</h1>
+
+            <div className="row">
+              
      { data && data.map((datanews) => {
        return <News
      
-	title= { datanews.title }
+         title={datanews.title}
+         image={datanews.image}
+         description={datanews.description}
 	
 	/>
 
 })}
                         
-</div>
+
 </div>
 </div>
 

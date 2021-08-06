@@ -16,12 +16,13 @@ const Navigation = (props) => {
 
  const toggle = () => setIsOpen(!isOpen);
 
- return (
+  return (
+    <div class="container-fluid">
+      <div class="row">
+    
    <Navbar
-     className="navbar navbar-dark bg-dark"
-     // style={{ backgroundColor: "black", color: "red" }}
-     expand="md">
-     <NavbarBrand tag={Link} to="/">Blog News RSS</NavbarBrand>
+     className="navbar navbar-dark bg-dark" expand="md">
+     <NavbarBrand tag={Link} to="/">HODINKEE</NavbarBrand>
      <NavbarToggler onClick={toggle} />
      <Collapse isOpen={isOpen} navbar>
        <Nav className="mr-auto" navbar>
@@ -38,7 +39,10 @@ const Navigation = (props) => {
        
        </Nav>
      </Collapse>
-   </Navbar>
+          </Navbar>
+         
+      </div>
+      </div>
  );
 }
 

@@ -6,6 +6,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer/';
 import Routes from './Routes';
+import { Container } from 'reactstrap';
 
 function App() {
   return (

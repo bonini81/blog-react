@@ -62,3 +62,8 @@ text-align: center;
 footer {
   background-color: #333 !important;
 }
+
+
+.card-title {
+    font-weight: bold;
+}
