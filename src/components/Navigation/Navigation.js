@@ -36,7 +36,9 @@ const Navigation = (props) => {
          <NavItem>
            <NavLink tag={Link} to="/newslist">Remote Posts</NavLink>
          </NavItem>
-       
+         <NavItem>
+           <NavLink tag={Link} to="/localnewslist">Local Posts</NavLink>
+         </NavItem>
        </Nav>
      </Collapse>
           </Navbar>
