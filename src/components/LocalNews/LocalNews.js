@@ -1,7 +1,9 @@
 import React from 'react';
 
+const LocalNews = (props) => {
 
-const LocalNews  = ( props ) => {
+
+
     return ( 
       <React.Fragment>
         
@@ -9,11 +11,14 @@ const LocalNews  = ( props ) => {
 <div className="col-lg-4 estilo-cards-home">
 <div className="card card-bonini-link" >
           
-<div className="card-body">
+<div className="card-body"  >
 
-          
-            <p>{ props.title }</p>
-</div>
+          <p> Post Id: { props.key }</p>
+              <p>{props.title}</p>
+              <p>{ props.content }</p>
+            </div>
+            
+           
           </div>
         </div>
       

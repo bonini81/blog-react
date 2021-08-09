@@ -22,10 +22,16 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app"],
+    "rules": {
+  
+      "eqeqeq": "error",
+      "multiline-comment-style": ["error", "starred-block"],
+      "quotes": ["error", "single"],
+      "yoda": "error",
+      "no-nested-ternary": "error"
+    }
+ 
   },
   "browserslist": {
     "production": [
