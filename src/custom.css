@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize');
 
 body {
-    font-family: 'Electrolize', sans-serif;
+    font-family: 'Electrolize', sans-serif !important;
 }
 
 
@@ -17,7 +17,7 @@ body {
 }
 
 nav.navbar.bg-dark {
-
+   
     background-color: #fff !important;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
@@ -30,40 +30,63 @@ nav.navbar.bg-dark {
 nav.navbar.bg-dark a {
 
   color: #000 !important;
-    
 
 }
 
 .nav-item:hover {
-    background-color: #7350ff;
-    border-radius: 5px;
+    text-decoration: underline;
+    
 }
 
 
-.piepag-adb {
-
-    background-color: #7350ff;
-    margin-top: 5%;
-
-}
-
-
-p.piepag-parrafo {
-
-display: table-cell;
-vertical-align: middle;
-color: #fff;
-height: 50px;
-text-align: center;
-
-}
 
 
 footer {
   background-color: #333 !important;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.centro-alineacion {
+
+    width: 70% !important;
+    margin-left: auto;
+    margin-right: auto;
+text-align: center;
+vertical-align:middle;
+padding-top: 15px;
+
+
 }
 
 
+h4.piepag-h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
 .card-title {
     font-weight: bold;
+}
+
+
+.sitetitle {
+    font-size: 1.6em !important;
+    font-weight: bolder;
+    padding-left: 7%;
+}
+
+.estilo-cards-home {
+    margin-bottom: 2%;
+}
+
+
+.local-news {
+    margin: 2% 0px 2% 0px;
+}
+
+h1.remote-news-title {
+    font-weight: bold !important;
+    font-size: 2.5em;
+    padding-bottom: 10px;
 }

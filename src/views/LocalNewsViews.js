@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-//import LocalNews from '../components/LocalNews';
 
 const LocalNewsViews = (props) => {
   
@@ -64,39 +63,49 @@ const submitEdits = (event, idToEdit) => {
   return (
 
   
-        <>
-        <h2 className="card-title">LocalStorage News</h2>
-<div className="col-lg-4 estilo-cards-home">
-<div className="card card-bonini-link" >
-          
-<div className="card-body">
+    <>
+      
+      <div class="container local-news">
+  <div class="row">
+    
+
+  <div className="col-lg-12">
+       
+            <h1 className="remote-news-title">LocalStorage News</h1>
+
 <h2>Create a Local News Story on your Browser</h2>
         <form onSubmit={addNote}>
                 <input type="text" name="note" placeholder="Post Title" />
                 <p></p>
                 <input type="text" name="content" placeholder="Post Content" />
                 <p></p>
-                <input type="submit" />
+                <input type="submit" value="Send Post"  />
               </form>
               </div>
-               
               </div>
-            <h2 className="card-title">LocalStorage News</h2>
+        </div>    
+           
+       
 
           
 
-            </div>      
+       
         
 
 
-     {notes.map((note) => (
-         <div className="col-lg-4 estilo-cards-home">
+            {notes.map((note) => (
+         <div class="container">
+         <div class="row">
+                  <div className="col-lg-4 estilo-cards-home">
+                  
        {
          note.id !== noteEditing ? (
-   
-          <div className="card card-bonini-link" > 
-              <div className="card-body">
-      <div>{note.text}  </div>   <div>{note.title}</div>
+         
+                        <div className="card card-bonini-link" >
+            
+                          <div className="card-body">
+                          <h2>{note.text} </h2>
+     <div>{note.title}</div>
       </div>
         </div>
       ) : (
@@ -108,10 +117,13 @@ const submitEdits = (event, idToEdit) => {
     )}
     <button onClick={() => deleteNote(note.id)}>delete</button>
     <button onClick={() => setNoteEditing(note.id)}>edit</button>
-  </div>
+                  </div>
+                </div>
+                </div>
 ))}    
         
-       
+ 
+    
       
 </>
   

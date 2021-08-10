@@ -21,8 +21,8 @@ const Navigation = (props) => {
       <div class="row">
     
    <Navbar
-     className="navbar navbar-dark bg-dark" expand="md">
-     <NavbarBrand tag={Link} to="/">HODINKEE</NavbarBrand>
+     className="navbar navbar-light bg-dark" expand="md">
+     <NavbarBrand tag={Link} to="/" className="sitetitle">HODINKEE</NavbarBrand>
      <NavbarToggler onClick={toggle} />
      <Collapse isOpen={isOpen} navbar>
        <Nav className="mr-auto" navbar>
@@ -30,12 +30,8 @@ const Navigation = (props) => {
          <NavItem>
            <NavLink tag={Link} to="/">Home</NavLink>
          </NavItem>
-         <NavItem>
-           <NavLink tag={Link} to="/neww">Local Posts</NavLink>
-         </NavItem>
-         <NavItem>
-           <NavLink tag={Link} to="/newslist">Remote Posts</NavLink>
-         </NavItem>
+         
+    
          <NavItem>
            <NavLink tag={Link} to="/localnewslist">Local Posts</NavLink>
          </NavItem>
