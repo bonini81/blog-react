@@ -1,1 +1,1 @@
-Blog News App for a Code Challenge. Production cloud link on Netlify, https://hodinkee-news.netlify.app/
+Blog News App for a React Code Challenge. Production cloud link on Netlify, https://hodinkee-news.netlify.app/
