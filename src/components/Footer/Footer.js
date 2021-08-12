@@ -13,7 +13,7 @@ const Footer = () => {
     
     <div className="col-12 col-md centro-alineacion">
       
-     <h4 className="piepag-h4">Hodinkee News App.</h4>
+     <h4 className="piepag-h4">Hodinkee News React App.</h4>
      <p>Copyright ©2021, HODINKEE Inc. All Rights Reserved.</p>
     
     </div>
